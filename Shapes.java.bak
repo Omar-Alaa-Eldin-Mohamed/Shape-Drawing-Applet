@@ -1,0 +1,101 @@
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.ArrayList<E>;
+
+public abstract class Shapes {
+	
+private int x1;
+private int x2;
+private int y1;
+private int y2;
+	
+Color color;
+boolean solid;
+
+
+public void set_x1 (int q){
+
+	x1 = q;
+}
+public void set_x2 (int w){
+
+	x1 = w;
+}
+public void set_y1 (int e){
+
+	y1 = e;
+}
+public void set_y2 (int r){
+
+	y2 = r;
+}
+
+public  int get_x1(){
+	return x1;
+}
+public  int get_x2(){
+	return x2;
+}
+public  int get_y1(){
+	return y1;
+}
+public  int get_y2(){
+	return y2;
+}
+
+
+public abstract void draw(Graphics g);
+	
+}
+
+class rectangle extends shapes{
+	
+public void draw(Graphics g){
+	if(solid){
+	g.fillRect(get_x1(),get_y1(),get_x2(),get_y2());
+	}
+	else
+	{
+		g.drawRect(get_x1(),get_y1(),get_x2(),get_y2());
+	}
+}	
+	
+}
+
+class oval extends shapes{
+	
+public void draw(Graphics g){
+	if(solid ==1){
+	g.fillOval(get_x1(),get_y1(),get_x2(),get_y2());
+	}
+	else
+	{
+		g.drawOval(get_x1(),get_y1(),get_x2(),get_y2());
+	}
+}	
+	
+}
+
+class line extends shapes{
+	
+public void draw(Graphics g){
+		
+	g.drawLine(get_x1(),get_y1(),get_x2(),get_y2());
+
+}	
+	
+}
+
+
+public class shape_applet extends Applet{
+	
+	public void paint (Graphics g)
+	{
+		
+		rectangle rect = new rectangle();
+		rect = 
+		
+		
+	}
+}
